@@ -23,7 +23,7 @@ export const sidebar: DefaultTheme.Sidebar = {
                 items: [
                     {
                         text: '教程简介',
-                        link: '/index.md',
+                        link: 'intro',
                     },
                 ]
             },
@@ -35,7 +35,7 @@ export const sidebar: DefaultTheme.Sidebar = {
                         items: [
                             {
                                 text: `${serial('linux.db')}MySQL 8.x 安装 & 配置 (Ubuntu)`,
-                                link: 'database/mysql/install-on-ubuntu.md',
+                                link: 'database/mysql/install-on-ubuntu',
                             }
                         ]
                     },

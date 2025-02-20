@@ -7,7 +7,7 @@ export const nav: DefaultTheme.NavItem[] = [
     },
     {
         text: 'Home2',
-        link: '/how-to/index',
+        link: '/how-to/intro',
         activeMatch: '/how-to/',
     },
     {

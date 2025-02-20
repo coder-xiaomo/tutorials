@@ -6,34 +6,34 @@
     <br>
     props.sidebarItem.base: {{ props.sidebarItem.base }}
     <br>
--->
-    <p v-if="props.sidebarItem.text">
-        <a v-if="props.sidebarItem.link" @click="goTo(props.sidebarItem.link)" style="cursor: pointer;">
-            {{ props.sidebarItem.text }}
-        </a>
-        <span style="font-weight: bold;" v-else>
-            {{ props.sidebarItem.text }}
-        </span>
-    </p>
-    <!-- ------------------- -->
+    -->
 
-    <!-- <pre>{{ page }}</pre> -->
+    <!-- 跳过当前页面的菜单 -->
+    <template v-if="props.sidebarItem.text !== '开始'">
+        <p v-if="props.sidebarItem.text">
+            <a v-if="props.sidebarItem.link" @click="goTo(props.sidebarItem.link)" style="cursor: pointer;">
+                {{ props.sidebarItem.text }}
+            </a>
+            <span style="font-weight: bold;" v-else>
+                {{ props.sidebarItem.text }}
+            </span>
+        </p>
+        <!-- ------------------- -->
 
-    <div v-if="props.sidebarItem.items" :style="props.sidebarItem.text ? 'margin-left: 25px;' : undefined">
-        <contents v-for="item in props.sidebarItem.items" :base="props.sidebarItem.base || props.base"
-            :sidebar-item="item" />
-    </div>
+        <div v-if="props.sidebarItem.items" :style="props.sidebarItem.text ? 'margin-left: 25px;' : undefined">
+            <contents v-for="item in props.sidebarItem.items" :base="props.sidebarItem.base || props.base"
+                :sidebar-item="item" />
+        </div>
+    </template>
 </template>
 
 <script setup lang="ts">
-import { useData, useRouter, DefaultTheme } from 'vitepress';
+import { useRouter, DefaultTheme } from 'vitepress';
 
 const props = defineProps<{
     base?: string,
     sidebarItem: DefaultTheme.SidebarItem
 }>()
-
-const { page } = useData()
 
 const router = useRouter()
 

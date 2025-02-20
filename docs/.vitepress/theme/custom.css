@@ -1,3 +1,11 @@
 :root {
+  /* 左侧边栏加宽 */
   --vp-sidebar-width: 320px;
+  /* 导航栏加高 */
+  --vp-nav-height: 72px;
+}
+
+.VPContent {
+  /* 首页与顶部之间的距离加高 */
+  padding-top: calc(var(--vp-nav-height) + 48px) !important;
 }
