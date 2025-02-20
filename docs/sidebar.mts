@@ -36,14 +36,30 @@ export const sidebar: DefaultTheme.Sidebar = {
                 items: [
                     {
                         text: `${serial('linux')}安装操作系统`,
+                        collapsed: true,
                         items: [
                             {
-                                text: `${serial('linux.system')}Ubuntu 24.04 Desktop 安装`,
-                                link: 'system/linux/install-ubuntu-desktop',
+                                text: `${serial('linux.system')}Linux 发行版简介`,
+                                link: 'system/linux/intro',
                             },
                             {
-                                text: `${serial('linux.system')}Ubuntu 24.04 Server 安装`,
-                                link: 'system/linux/install-ubuntu-server',
+                                text: `${serial('linux.system')}Ubuntu Desktop 24.04 安装配置`,
+                                link: 'system/linux/ubuntu/install-ubuntu-desktop',
+                            },
+                            {
+                                text: `${serial('linux.system')}Ubuntu Server 24.04 安装配置`,
+                                // link: 'system/linux/install-ubuntu-desktop',
+                                collapsed: true,
+                                items: [
+                                    {
+                                        text: `${serial('linux.system.ubuntu_server')}安装`,
+                                        link: 'system/linux/ubuntu/install-ubuntu-server',
+                                    },
+                                    {
+                                        text: `${serial('linux.system.ubuntu_server')}网络配置`,
+                                        // link: 'system/linux/install-ubuntu-desktop',
+                                    },
+                                ]
                             },
                         ]
                     },
@@ -73,8 +89,8 @@ export const sidebar: DefaultTheme.Sidebar = {
                         text: `${serial('linux')}安装开发工具`,
                         items: [
                             {
-                                text: `${serial('linux.develop')}MySQL 8.x 安装 & 配置 (Ubuntu)`,
-                                link: 'database/mysql/install-on-ubuntu',
+                                text: `${serial('linux.develop')}Java OpenJDK 17 安装 & 配置 (Ubuntu)`,
+                                link: 'environment/java/configure-openjdk-on-ubuntu',
                             },
                         ]
                     },
