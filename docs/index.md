@@ -5,6 +5,10 @@ layout: home
 hero:
   name: "就这么弄"
   text: "简单步骤与实用技巧"
+  image:
+    src: /public/assets/logo.svg
+    alt: VitePress
+    style: "border-radius: 50%"
   tagline: My great project tagline
   actions:
     - theme: brand
