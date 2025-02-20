@@ -12,6 +12,9 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
+      text: 进入教程
+      link: /how-to
+    - theme: alt
       text: Markdown Examples
       link: /markdown-examples
     - theme: alt
