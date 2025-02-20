@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { sidebar } from '../sidebar.mts'
+import { nav } from '../nav.mts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -15,20 +17,9 @@ export default defineConfig({
       src: '/public/assets/logo.svg',
     },
 
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
+    nav: nav,
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
