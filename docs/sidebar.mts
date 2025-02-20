@@ -7,11 +7,15 @@ function serial(key) {
         serialNumberMap[key] = 0
     }
     const serialNumber = ++serialNumberMap[key] // `${++serialNumberMap[key]}. `
-    // return
+
+    if (key === '') {
+        return `${serialNumber}. 🐬 `
+    }
+
     if (!key.includes('.')) {
         return `🌟 `
     }
-    return `✨ `
+    return '' // `✨ `
 }
 
 export const sidebar: DefaultTheme.Sidebar = {
@@ -28,29 +32,68 @@ export const sidebar: DefaultTheme.Sidebar = {
                 ]
             },
             {
-                text: 'Linux 系统如何 ... ?',
+                text: `${serial('')} Linux 系统如何 ... ?`,
                 items: [
+                    {
+                        text: `${serial('linux')}安装操作系统`,
+                        items: [
+                            {
+                                text: `${serial('linux.system')}Ubuntu 24.04 Desktop 安装`,
+                                link: 'system/linux/install-ubuntu-desktop',
+                            },
+                            {
+                                text: `${serial('linux.system')}Ubuntu 24.04 Server 安装`,
+                                link: 'system/linux/install-ubuntu-server',
+                            },
+                        ]
+                    },
                     {
                         text: `${serial('linux')}安装数据库`,
                         items: [
                             {
                                 text: `${serial('linux.db')}MySQL 8.x 安装 & 配置 (Ubuntu)`,
                                 link: 'database/mysql/install-on-ubuntu',
-                            }
+                            },
+                            {
+                                text: `${serial('linux.db')}redis 安装 & 配置`,
+                                link: 'database/redis/install-on-ubuntu',
+                            },
+                        ]
+                    },
+                    {
+                        text: `${serial('linux')}配置编程语言`,
+                        items: [
+                            {
+                                text: `${serial('linux.env')}Node.js & npm 安装 & 配置 (Ubuntu)`,
+                                link: 'programming-language/node/install-on-ubuntu',
+                            },
+                        ]
+                    },
+                    {
+                        text: `${serial('linux')}安装开发工具`,
+                        items: [
+                            {
+                                text: `${serial('linux.develop')}MySQL 8.x 安装 & 配置 (Ubuntu)`,
+                                link: 'database/mysql/install-on-ubuntu',
+                            },
                         ]
                     },
                 ]
             },
             {
-                text: 'Windows 系统如何 ... ?',
+                text: `${serial('')} Windows 系统如何 ... ?`,
                 items: [
                     {
-                        text: `${serial('win')}安装数据库`,
+                        text: `${serial('windows')}安装数据库`,
                         items: [
                             {
-                                text: `${serial('win.db')}MySQL 8.x 安装 & 配置`,
-                                link: 'database/mysql/install-on-windows.md',
-                            }
+                                text: `${serial('windows.db')}MySQL 8.x 安装 & 配置`,
+                                link: 'database/mysql/install-on-windows',
+                            },
+                            {
+                                text: `${serial('windows.db')}redis 安装 & 配置`,
+                                link: 'database/redis/install-on-windows',
+                            },
                         ]
                     },
                 ]

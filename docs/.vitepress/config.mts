@@ -14,7 +14,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
-      src: '/public/assets/logo.svg',
+      src: '/assets/logo.svg',
     },
 
     nav: nav,

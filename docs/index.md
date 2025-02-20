@@ -6,7 +6,7 @@ hero:
   name: "就这么弄"
   text: "简单步骤与实用技巧"
   image:
-    src: /public/assets/logo.svg
+    src: /assets/logo.svg
     alt: VitePress
     style: "border-radius: 50%"
   tagline: 时间应该更重要的事情
