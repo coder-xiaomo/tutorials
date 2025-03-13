@@ -6,6 +6,10 @@ import './style.css'
 import './custom.css'
 import Announcement from './components/Announcement.vue'
 import ArticleInfo from './components/ArticleInfo.vue'
+import { FooterData } from '../../home-footbar.mts'
+import {
+  HomeFooter
+} from '@theojs/lumen'
 import {
   NolebaseGitChangelogPlugin
 } from '@nolebase/vitepress-plugin-git-changelog/client'
@@ -34,6 +38,8 @@ export default {
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
+      // [配置] 首页 Footbar
+      'layout-bottom': () => h(HomeFooter, { Footer_Data: FooterData })
     })
   },
   enhanceApp({ app, router, siteData }) {
