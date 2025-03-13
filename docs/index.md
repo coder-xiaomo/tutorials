@@ -21,12 +21,18 @@ hero:
       text: API Examples
       link: /api-examples
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+# features:
+#   - title: Feature A
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature B
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature C
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+::: warning 🚧 施工中
+
+很高兴见到你！但很抱歉，这个项目还在施工中。
+
+本项目还处在早期阶段，内容尚不完善，过段时间再来看吧
+:::
