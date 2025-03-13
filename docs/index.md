@@ -9,17 +9,17 @@ hero:
     src: /assets/logo.svg
     alt: VitePress
     style: "border-radius: 50%"
-  tagline: 时间应该更重要的事情
+  tagline: 你的时间应该去做更重要的事情
   actions:
     - theme: brand
       text: 进入教程
       link: /how-to/intro
-    - theme: alt
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+    # - theme: alt
+    #   text: Markdown Examples
+    #   link: /markdown-examples
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 # features:
 #   - title: Feature A
