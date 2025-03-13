@@ -9,6 +9,7 @@ import {
   NolebaseGitChangelogPlugin
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 import {
+  LayoutMode,
   NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
@@ -69,7 +70,16 @@ export default {
             },
           },
         },
-      }
+      },
+      layoutSwitch: {
+        defaultMode: LayoutMode.BothWidthAdjustable,
+        pageLayoutMaxWidth: {
+          defaultMaxWidth: 96, // 60 - 100
+        },
+        contentLayoutMaxWidth: {
+          defaultMaxWidth: 90, // 60 - 100
+        }
+      },
     } as Options)
   }
 } satisfies Theme

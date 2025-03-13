@@ -23,17 +23,17 @@ export default defineConfig({
     ],
 
     optimizeDeps: {
-      // [配置] 阅读增强
       exclude: [
+        // [配置] 阅读增强
         '@nolebase/vitepress-plugin-enhanced-readabilities/client',
         'vitepress',
         '@nolebase/ui',
       ],
     },
-    // [配置] 阅读增强
     ssr: {
       noExternal: [
         // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可 //
+        // [配置] 阅读增强
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/ui',
       ],
@@ -98,5 +98,5 @@ export default defineConfig({
     lastUpdated: {
       text: '最近更新',
     },
-  }
+  },
 })
