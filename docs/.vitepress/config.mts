@@ -8,10 +8,13 @@ export default defineConfig({
     server: {
       port: 5678,
     },
-    base: '/tutorials/',
   },
+
   title: "就这么弄",
   description: "简单步骤与实用技巧",
+
+  base: '/tutorials/',
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
