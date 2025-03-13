@@ -2,6 +2,8 @@
 
 “简单步骤与实用技巧”
 
+> 文档地址：[coder-xiaomo.github.io/tutorials/](coder-xiaomo.github.io/tutorials/)
+>
 > 开源地址：
 > [GitHub](https://github.com/coder-xiaomo/tutorials)
 > [Gitee](https://gitee.com/coder-xiaomo/tutorials)
