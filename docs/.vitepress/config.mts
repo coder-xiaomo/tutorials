@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { base } from '../env.mts'
 import { sidebar } from '../sidebar.mts'
 import { nav } from '../nav.mts'
 import {
@@ -50,7 +51,7 @@ export default defineConfig({
   title: "就这么弄 (🚧 施工中)",
   description: "简单步骤与实用技巧",
 
-  base: '/tutorials/',
+  base: base,
   locales: {
     root: {
       label: '简体中文',

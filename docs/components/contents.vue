@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { useRouter, DefaultTheme } from 'vitepress';
+import { base } from '../env.mts';
 
 const props = defineProps<{
     base?: string,
@@ -38,7 +39,8 @@ const props = defineProps<{
 const router = useRouter()
 
 function goTo(link: string) {
-    const target = (props.base || '') + link?.replace('.md', '.html')
+    const baseUrl = (base.endsWith('/') ? base.substring(0, base.length - 1) : base)
+    const target = baseUrl + (props.base || '') + link?.replace('.md', '.html')
     console.log('base', props.base)
     console.log('link', link)
     console.log('target', target)
