@@ -4,7 +4,8 @@ layout: home
 
 hero:
   name: "就这么弄"
-  text: "简单步骤与实用技巧"
+  text: "简单步骤"
+  textsuffix: "与实用技巧"
   image:
     src: /assets/logo.svg
     alt: VitePress
@@ -29,6 +30,8 @@ hero:
 #   - title: Feature C
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
+<Home />
 
 ::: warning 🚧 施工中
 

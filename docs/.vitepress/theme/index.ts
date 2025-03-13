@@ -9,6 +9,7 @@ import ArticleInfo from './components/ArticleInfo.vue'
 import { FooterData } from '../../home-footbar.mts'
 import {
   HomeFooter,
+  HomeUnderline,
   ShareButton
 } from '@theojs/lumen'
 import {
@@ -99,5 +100,9 @@ export default {
         }
       },
     } as Options)
+
+    // [配置] 首页下划线
+    // docs: https://lumen.theojs.cn/guide/homeunderline
+    app.component('Home', HomeUnderline)
   }
 } satisfies Theme
