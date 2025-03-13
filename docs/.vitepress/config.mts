@@ -62,7 +62,8 @@ export default defineConfig({
     sidebar: sidebar,
 
     editLink: {
-      pattern: 'https://github.com/coder-xiaomo/tutorials/edit/main/docs/:path'
+      text: '在 GitHub 上编辑此页面',
+      pattern: 'https://github.com/coder-xiaomo/tutorials/edit/main/docs/:path',
     },
 
     socialLinks: [
@@ -95,8 +96,28 @@ export default defineConfig({
       provider: 'local'
     },
 
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    outline: {
+      label: '页面导航'
+    },
+
     lastUpdated: {
       text: '最近更新',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      }
     },
+
+    langMenuLabel: '多语言',
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式'
   },
 })
