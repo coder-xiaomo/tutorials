@@ -2,11 +2,11 @@ import { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.NavItem[] = [
     {
-        text: 'Home',
+        text: '首页',
         link: '/',
     },
     {
-        text: 'Home2',
+        text: '教程',
         link: '/how-to/intro',
         activeMatch: '/how-to/',
     },
