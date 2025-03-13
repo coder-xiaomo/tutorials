@@ -14,12 +14,30 @@ export default defineConfig({
     },
 
     plugins: [
+      // [配置] 基于 Git 的页面历史
       GitChangelog({
         // 填写在此处填写您的仓库链接
         repoURL: () => 'https://github.com/coder-xiaomo/tutorials',
       }),
       GitChangelogMarkdownSection(),
     ],
+
+    optimizeDeps: {
+      // [配置] 阅读增强
+      exclude: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+        'vitepress',
+        '@nolebase/ui',
+      ],
+    },
+    // [配置] 阅读增强
+    ssr: {
+      noExternal: [
+        // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可 //
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/ui',
+      ],
+    },
   },
 
   title: "就这么弄 (🚧 施工中)",

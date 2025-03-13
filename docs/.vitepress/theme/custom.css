@@ -9,3 +9,8 @@
   /* 首页与顶部之间的距离加高 */
   padding-top: calc(var(--vp-nav-height) + 48px) !important;
 }
+
+/* [配置] 阅读增强 */
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}
