@@ -24,6 +24,7 @@ export const FooterData: FooterDataType = {
             links: [
                 {
                     name: 'GitHub',
+                    icon: 'octicon:mark-github-16',
                     link: 'https://github.com/coder-xiaomo/tutorials',
                 },
                 {
