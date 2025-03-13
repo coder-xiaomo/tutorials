@@ -5,6 +5,9 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
+// import {
+//   InlineLinkPreviewElementTransform
+// } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -24,6 +27,8 @@ export default defineConfig({
 
     optimizeDeps: {
       exclude: [
+        // [配置] 行内链接预览
+        // '@nolebase/vitepress-plugin-inline-link-preview/client',
         // [配置] 阅读增强
         '@nolebase/vitepress-plugin-enhanced-readabilities/client',
         'vitepress',
@@ -33,6 +38,8 @@ export default defineConfig({
     ssr: {
       noExternal: [
         // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可 //
+        // [配置] 行内链接预览
+        // '@nolebase/vitepress-plugin-inline-link-preview',
         // [配置] 阅读增强
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/ui',
@@ -97,8 +104,8 @@ export default defineConfig({
     },
 
     docFooter: {
-      prev: '上一页',
-      next: '下一页'
+      prev: '上一篇',
+      next: '下一篇'
     },
 
     outline: {
@@ -120,4 +127,13 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式'
   },
+
+  // markdown: {
+  //   config(md) {
+  //     // 其他 markdown-it 配置... //
+  //     // [配置] 行内链接预览
+  //     // refer: https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-inline-link-preview/getting-started
+  //     md.use(InlineLinkPreviewElementTransform)
+  //   }
+  // },
 })
