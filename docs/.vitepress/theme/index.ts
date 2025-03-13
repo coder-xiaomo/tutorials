@@ -8,7 +8,8 @@ import Announcement from './components/Announcement.vue'
 import ArticleInfo from './components/ArticleInfo.vue'
 import { FooterData } from '../../home-footbar.mts'
 import {
-  HomeFooter
+  HomeFooter,
+  ShareButton
 } from '@theojs/lumen'
 import {
   NolebaseGitChangelogPlugin
@@ -39,7 +40,14 @@ export default {
       // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
       // [配置] 首页 Footbar
-      'layout-bottom': () => h(HomeFooter, { Footer_Data: FooterData })
+      'layout-bottom': () => h(HomeFooter, { Footer_Data: FooterData }),
+      // [配置] 侧栏分享按钮
+      'aside-outline-before': () => h(ShareButton, {
+        buttonIcon: 'fa6-solid:share-nodes', // 自定义图标 //
+        buttonText: '分享此页面', // 自定义按钮文本 //
+        copiedIcon: 'mdi:thumbs-up', // 自定义复制成功后的图标 //
+        copiedText: '链接已复制！' // 自定义复制成功后的文本 //
+      }),
     })
   },
   enhanceApp({ app, router, siteData }) {
