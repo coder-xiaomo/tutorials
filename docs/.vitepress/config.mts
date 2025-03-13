@@ -22,7 +22,7 @@ export default defineConfig({
     ],
   },
 
-  title: "就这么弄",
+  title: "就这么弄 (🚧 施工中)",
   description: "简单步骤与实用技巧",
 
   base: '/tutorials/',
@@ -42,6 +42,10 @@ export default defineConfig({
     nav: nav,
 
     sidebar: sidebar,
+
+    editLink: {
+      pattern: 'https://github.com/coder-xiaomo/tutorials/edit/main/docs/:path'
+    },
 
     socialLinks: [
       // { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
