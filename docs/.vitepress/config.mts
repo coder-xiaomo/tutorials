@@ -44,6 +44,9 @@ export default defineConfig({
         // [配置] 阅读增强
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/ui',
+        // [配置] @theojs/lumen
+        // issue: https://github.com/Theo-Messi/lumen/issues/234
+        'dayjs',
       ],
     },
   },
