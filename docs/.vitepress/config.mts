@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { sidebar } from '../sidebar.mts'
 import { nav } from '../nav.mts'
+import {
+  GitChangelog,
+  GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,12 +12,26 @@ export default defineConfig({
     server: {
       port: 5678,
     },
+
+    plugins: [
+      GitChangelog({
+        // 填写在此处填写您的仓库链接
+        repoURL: () => 'https://github.com/coder-xiaomo/tutorials',
+      }),
+      GitChangelogMarkdownSection(),
+    ],
   },
 
   title: "就这么弄",
   description: "简单步骤与实用技巧",
 
   base: '/tutorials/',
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+    }
+  },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
